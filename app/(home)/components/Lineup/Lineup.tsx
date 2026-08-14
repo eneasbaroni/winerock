@@ -1,9 +1,17 @@
 import { artists } from "@/lib/artists";
 import { LEVEL_ORDER, LEVEL_STYLES, TYPE_STYLES } from "./constants";
+import Image from "next/image";
 
 export const Lineup = () => {
     return (
-        <section className="w-full px-6 py-24 tablet:py-16 mobile:py-10 mobile:min-h-screen mobile:flex mobile:items-center">
+        <section className="w-full px-6 py-24 tablet:py-16 mobile:py-10 mobile:min-h-screen mobile:flex mobile:flex-col mobile:justify-center">
+            <Image
+                src="/images/logos/logo-white.svg"
+                alt="Wine Rock Logo"
+                width={400}
+                height={400}
+                className="h-15 tablet:h-10 mobile:h-8 mx-auto mb-12 tablet:mb-8 mobile:mb-6"
+            />
             <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center font-anton uppercase">
                 {LEVEL_ORDER.map((level) => {
                     const levelArtists = artists.filter(
