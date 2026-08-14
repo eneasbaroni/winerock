@@ -3,29 +3,8 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
-
-const LAYERS = [
-    {
-        src: "/images/parallax/01.png",
-        align: "justify-center",
-        range: ["0%", "40%"],
-    },
-    {
-        src: "/images/parallax/02.png",
-        align: "justify-end",
-        range: ["0%", "26%"],
-    },
-    {
-        src: "/images/parallax/03.png",
-        align: "justify-center",
-        range: ["0%", "18%"],
-    },
-    {
-        src: "/images/parallax/04.png",
-        align: "justify-center",
-        range: ["0%", "10%"],
-    },
-] as const;
+import { LAYERS } from "./constants";
+import { HeroProps } from "./types";
 
 const ParallaxLayer = ({
     src,
@@ -33,13 +12,7 @@ const ParallaxLayer = ({
     range,
     progress,
     priority,
-}: {
-    src: string;
-    align: string;
-    range: [string, string];
-    progress: ReturnType<typeof useScroll>["scrollYProgress"];
-    priority?: boolean;
-}) => {
+}: HeroProps) => {
     const y = useTransform(progress, [0, 1], range);
 
     return (
