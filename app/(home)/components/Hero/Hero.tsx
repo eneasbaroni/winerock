@@ -33,6 +33,7 @@ export const Hero = () => {
                         src={layer.src}
                         srcMobile={layer.srcMobile}
                         align={layer.align}
+                        alignMobile={layer.alignMobile}
                         range={layer.range as [string, string]}
                         rangeMobile={layer.rangeMobile as [string, string]}
                         progress={scrollYProgress}

@@ -10,6 +10,7 @@ export const ParallaxLayer = ({
     src,
     srcMobile,
     align,
+    alignMobile,
     range,
     rangeMobile,
     progress,
@@ -36,7 +37,7 @@ export const ParallaxLayer = ({
     return (
         <motion.div
             style={{ y }}
-            className={`absolute inset-0 flex ${align} pointer-events-none`}
+            className={`absolute inset-0 flex ${isMobile ? alignMobile : align} pointer-events-none`}
         >
             <Image
                 src={isMobile ? srcMobile : src}
