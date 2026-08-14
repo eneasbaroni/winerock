@@ -1,10 +1,12 @@
 "use client";
 
 import { useMotionValue, useSpring, useTransform } from "motion/react";
+import { useMediaQuery } from "@/lib/hooks/useMediaQuery";
 import {
     BACK_LAYER_OFFSET_RANGE,
     FRONT_LAYER_OFFSET_X_RANGE,
     FRONT_LAYER_OFFSET_Y_RANGE,
+    MOBILE_QUERY,
     SPRING_CONFIG,
     TAG_OFFSET_RANGE,
     TILT_X_RANGE,
@@ -12,6 +14,8 @@ import {
 } from "./constants";
 
 export const useCardTilt = () => {
+    const isMobile = useMediaQuery(MOBILE_QUERY) === true;
+
     const pointerX = useMotionValue(0);
     const pointerY = useMotionValue(0);
 
@@ -52,6 +56,8 @@ export const useCardTilt = () => {
     );
 
     const handlePointerMove = (event: React.MouseEvent<HTMLElement>) => {
+        if (isMobile) return;
+
         const bounds = event.currentTarget.getBoundingClientRect();
         pointerX.set((event.clientX - bounds.left) / bounds.width - 0.5);
         pointerY.set((event.clientY - bounds.top) / bounds.height - 0.5);

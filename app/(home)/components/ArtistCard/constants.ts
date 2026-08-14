@@ -48,3 +48,5 @@ export const TAG_OFFSET_RANGE: [string, string] = ["-6px", "6px"];
 
 export const BACK_LAYER_Z = -16;
 export const FRONT_LAYER_Z = 36;
+
+export const MOBILE_QUERY = "(width < 768px)";

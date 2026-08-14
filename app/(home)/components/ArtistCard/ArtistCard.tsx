@@ -56,7 +56,7 @@ export const ArtistCard = ({ artist }: ArtistCardProps) => {
                     animate={{ rotateY: isFlipped ? 180 : 0 }}
                     transition={FLIP_TRANSITION}
                     style={PRESERVE_3D_STYLE}
-                    className="group relative h-full w-full cursor-pointer rounded-2xl outline-none transition-shadow duration-300 hover:shadow-md hover:shadow-black/20"
+                    className="group relative h-full w-full cursor-pointer rounded-2xl outline-none transition-shadow duration-300 hover:shadow-md hover:shadow-black/20 mobile:shadow-none"
                 >
                     <div
                         style={{
@@ -74,7 +74,7 @@ export const ArtistCard = ({ artist }: ArtistCardProps) => {
                                 alt={artist.name}
                                 fill
                                 sizes="(width < 768px) 100vw, (width < 1024px) 33vw, 25vw"
-                                className="object-cover grayscale transition-all duration-500 ease-out group-hover:scale-110 group-hover:grayscale-0"
+                                className="object-cover grayscale transition-all duration-500 ease-out group-hover:scale-110 group-hover:grayscale-0 mobile:scale-100 mobile:grayscale"
                             />
                         </motion.div>
                         <motion.span
