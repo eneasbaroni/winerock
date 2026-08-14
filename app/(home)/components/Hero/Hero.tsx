@@ -1,40 +1,16 @@
 "use client";
 
-import { useRef } from "react";
-import Image from "next/image";
-import { motion, useScroll, useTransform } from "motion/react";
+import { useRef, useState } from "react";
+import { motion, useScroll } from "motion/react";
 import { LAYERS } from "./constants";
-import { HeroProps } from "./types";
-
-const ParallaxLayer = ({
-    src,
-    align,
-    range,
-    progress,
-    priority,
-}: HeroProps) => {
-    const y = useTransform(progress, [0, 1], range);
-
-    return (
-        <motion.div
-            style={{ y }}
-            className={`absolute inset-0 flex ${align} pointer-events-none`}
-        >
-            <Image
-                src={src}
-                alt=""
-                width={5406}
-                height={2411}
-                priority={priority}
-                draggable={false}
-                className="h-full w-auto max-w-none select-none"
-            />
-        </motion.div>
-    );
-};
+import { Loader } from "@/components";
+import { ParallaxLayer } from "./ParallaxLayer";
 
 export const Hero = () => {
     const sectionRef = useRef<HTMLElement>(null);
+    const [loadedCount, setLoadedCount] = useState(0);
+    const isReady = loadedCount >= LAYERS.length;
+
     const { scrollYProgress } = useScroll({
         target: sectionRef,
         offset: ["start start", "end start"],
@@ -45,16 +21,25 @@ export const Hero = () => {
             ref={sectionRef}
             className="relative h-screen w-full overflow-hidden bg-wr-wine"
         >
-            {LAYERS.map((layer, index) => (
-                <ParallaxLayer
-                    key={layer.src}
-                    src={layer.src}
-                    align={layer.align}
-                    range={layer.range as [string, string]}
-                    progress={scrollYProgress}
-                    priority={index === 0}
-                />
-            ))}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isReady ? 1 : 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="absolute inset-0"
+            >
+                {LAYERS.map((layer) => (
+                    <ParallaxLayer
+                        key={layer.src}
+                        src={layer.src}
+                        align={layer.align}
+                        range={layer.range as [string, string]}
+                        progress={scrollYProgress}
+                        onLoad={() => setLoadedCount((count) => count + 1)}
+                    />
+                ))}
+            </motion.div>
+
+            {!isReady && <Loader />}
         </section>
     );
 };
