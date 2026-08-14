@@ -19,7 +19,7 @@ export const Hero = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative h-screen w-full overflow-hidden bg-wr-wine"
+            className="relative h-svh w-full overflow-hidden bg-wr-wine"
         >
             <motion.div
                 initial={{ opacity: 0 }}
