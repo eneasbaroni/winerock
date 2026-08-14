@@ -1,17 +1,22 @@
 import { motion, useTransform } from "motion/react";
 import { ParallaxLayerProps } from "./types";
+import { DESKTOP_IMAGE_SIZE, MOBILE_IMAGE_SIZE, MOBILE_QUERY } from "./constants";
+import { useMediaQuery } from "@/lib/hooks/useMediaQuery";
 import Image from "next/image";
 import Lenis from "lenis";
 import { useEffect } from "react";
 
 export const ParallaxLayer = ({
     src,
+    srcMobile,
     align,
     range,
+    rangeMobile,
     progress,
     onLoad,
 }: ParallaxLayerProps) => {
-    const y = useTransform(progress, [0, 1], range);
+    const isMobile = useMediaQuery(MOBILE_QUERY);
+    const y = useTransform(progress, [0, 1], isMobile ? rangeMobile : range);
 
     useEffect(() => {
         const lenis = new Lenis();
@@ -24,16 +29,20 @@ export const ParallaxLayer = ({
         requestAnimationFrame(raf);
     }, []);
 
+    if (isMobile === undefined) return null;
+
+    const { width, height } = isMobile ? MOBILE_IMAGE_SIZE : DESKTOP_IMAGE_SIZE;
+
     return (
         <motion.div
             style={{ y }}
             className={`absolute inset-0 flex ${align} pointer-events-none`}
         >
             <Image
-                src={src}
+                src={isMobile ? srcMobile : src}
                 alt=""
-                width={5406}
-                height={2411}
+                width={width}
+                height={height}
                 priority
                 draggable={false}
                 onLoad={onLoad}

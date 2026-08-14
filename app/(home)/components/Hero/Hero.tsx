@@ -31,8 +31,10 @@ export const Hero = () => {
                     <ParallaxLayer
                         key={layer.src}
                         src={layer.src}
+                        srcMobile={layer.srcMobile}
                         align={layer.align}
                         range={layer.range as [string, string]}
+                        rangeMobile={layer.rangeMobile as [string, string]}
                         progress={scrollYProgress}
                         onLoad={() => setLoadedCount((count) => count + 1)}
                     />
