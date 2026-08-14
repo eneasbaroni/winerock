@@ -27,11 +27,19 @@ export const ArtistCard = ({ artist }: ArtistCardProps) => {
                 }}
                 animate={{ rotateY: isFlipped ? 180 : 0 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                style={{ transformStyle: "preserve-3d" }}
+                style={{
+                    transformStyle: "preserve-3d",
+                    WebkitTransformStyle: "preserve-3d",
+                }}
                 className="group relative aspect-3/4 w-full cursor-pointer rounded-2xl outline-none "
             >
                 <div
-                    style={{ backfaceVisibility: "hidden" }}
+                    style={{
+                        backfaceVisibility: "hidden",
+                        WebkitBackfaceVisibility: "hidden",
+                        transform: "translateZ(0)",
+                        WebkitTransform: "translateZ(0)",
+                    }}
                     className={`absolute inset-0 flex flex-col overflow-hidden rounded-sm ${TYPE_CARD_STYLES[artist.type]} `}
                 >
                     <div className="h-2/3 w-full border-b border-black/20">
@@ -63,7 +71,9 @@ export const ArtistCard = ({ artist }: ArtistCardProps) => {
                 <div
                     style={{
                         backfaceVisibility: "hidden",
-                        transform: "rotateY(180deg)",
+                        WebkitBackfaceVisibility: "hidden",
+                        transform: "rotateY(180deg) translateZ(0)",
+                        WebkitTransform: "rotateY(180deg) translateZ(0)",
                     }}
                     className={`absolute inset-0 overflow-hidden rounded-sm ${TYPE_CARD_STYLES[artist.type]}`}
                 >
