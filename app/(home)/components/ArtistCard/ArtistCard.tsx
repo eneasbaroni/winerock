@@ -28,14 +28,14 @@ export const ArtistCard = ({ artist }: ArtistCardProps) => {
                 animate={{ rotateY: isFlipped ? 180 : 0 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
                 style={{ transformStyle: "preserve-3d" }}
-                className="group relative aspect-3/4 w-full cursor-pointer rounded-2xl outline-none"
+                className="group relative aspect-3/4 w-full cursor-pointer rounded-2xl outline-none "
             >
                 <div
                     style={{ backfaceVisibility: "hidden" }}
-                    className={`absolute inset-0 flex flex-col overflow-hidden rounded-2xl ${TYPE_CARD_STYLES[artist.type]}`}
+                    className={`absolute inset-0 flex flex-col overflow-hidden rounded-sm ${TYPE_CARD_STYLES[artist.type]} `}
                 >
-                    <div className="h-2/3 w-full p-3">
-                        <div className="relative h-full w-full overflow-hidden rounded-xl">
+                    <div className="h-2/3 w-full border-b border-black/20">
+                        <div className="relative h-full w-full overflow-hidden">
                             <Image
                                 src={artist.image}
                                 alt={artist.name}
@@ -47,7 +47,7 @@ export const ArtistCard = ({ artist }: ArtistCardProps) => {
                     </div>
                     <div className="flex flex-1 flex-col items-center justify-between gap-2 px-4 py-4 text-center">
                         <span
-                            className={`rounded-full px-2 py-0.5 font-oswald text-[10px] uppercase tracking-widest ${TAG_STYLE}`}
+                            className={`rounded-full px-2 py-0.5 font-oswald text-[10px] uppercase tracking-widest ${TAG_STYLE} absolute top-2 left-2`}
                         >
                             {ARTIST_TYPE_LABEL[artist.type]}
                         </span>
@@ -65,17 +65,33 @@ export const ArtistCard = ({ artist }: ArtistCardProps) => {
                         backfaceVisibility: "hidden",
                         transform: "rotateY(180deg)",
                     }}
-                    className={`absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-2xl px-6 text-center ${TYPE_CARD_STYLES[artist.type]}`}
+                    className={`absolute inset-0 overflow-hidden rounded-sm ${TYPE_CARD_STYLES[artist.type]}`}
                 >
-                    <span className="font-anton text-xl text-white uppercase">
-                        {artist.name}
-                    </span>
-                    <p className="font-inter text-sm font-light text-white/80">
-                        {artist.description}
-                    </p>
-                    <span className="font-oswald text-[11px] tracking-widest text-white/50 uppercase">
-                        Click para volver
-                    </span>
+                    <div
+                        className="absolute inset-0 bg-black/15"
+                        style={{
+                            maskImage: "url(/images/lineup/card-back-02.svg)",
+                            WebkitMaskImage:
+                                "url(/images/lineup/card-back-02.svg)",
+                            maskRepeat: "no-repeat",
+                            WebkitMaskRepeat: "no-repeat",
+                            maskPosition: "center",
+                            WebkitMaskPosition: "center",
+                            maskSize: "cover",
+                            WebkitMaskSize: "cover",
+                        }}
+                    />
+                    <div className="absolute inset-4 flex flex-col items-center justify-center gap-3 rounded-sm border border-white/10 bg-white/10 px-6 text-center backdrop-blur-sm">
+                        <span className="font-anton text-xl text-white uppercase">
+                            {artist.name}
+                        </span>
+                        <p className="font-inter text-sm font-light text-white/90">
+                            {artist.description}
+                        </p>
+                        <span className="font-oswald text-[11px] tracking-widest text-white/60 uppercase">
+                            Click para volver
+                        </span>
+                    </div>
                 </div>
             </motion.div>
         </div>
