@@ -10,3 +10,8 @@ export type Artist = {
     type: ArtistType;
     level: ProminenceLevel;
 };
+
+export const ARTIST_TYPE_LABEL: Record<ArtistType, string> = {
+    music: "Música",
+    gastronomic: "Gastronomía",
+};

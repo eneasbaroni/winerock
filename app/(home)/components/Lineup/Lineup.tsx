@@ -24,9 +24,12 @@ export const Lineup = () => {
                         <p key={level} className={LEVEL_STYLES[level]}>
                             {levelArtists.map((artist, index) => (
                                 <span key={artist.id}>
-                                    <span className={TYPE_STYLES[artist.type]}>
+                                    <a
+                                        href={`#${artist.id}`}
+                                        className={`${TYPE_STYLES[artist.type]} mobile:pointer-events-none transition-opacity hover:opacity-70`}
+                                    >
                                         {artist.name}
-                                    </span>
+                                    </a>
                                     {index < levelArtists.length - 1 && (
                                         <span className="text-white/40">
                                             {" "}

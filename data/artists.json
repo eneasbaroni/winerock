@@ -2,7 +2,7 @@
     {
         "id": "ratones-paranoicos",
         "name": "Ratones Paranoicos",
-        "image": "/images/lineup/ratones-paranoicos.jpg",
+        "image": "/images/lineup/artist.jpg",
         "description": "Banda pionera del rock argentino, referente indiscutido del género.",
         "type": "music",
         "level": 3
@@ -10,7 +10,7 @@
     {
         "id": "catupecu-machu",
         "name": "Catupecu Machu",
-        "image": "/images/lineup/catupecu-machu.jpg",
+        "image": "/images/lineup/artist2.jpg",
         "description": "Rock alternativo con una puesta en escena intensa y letras profundas.",
         "type": "music",
         "level": 3
@@ -18,7 +18,7 @@
     {
         "id": "estelares",
         "name": "Estelares",
-        "image": "/images/lineup/estelares.jpg",
+        "image": "/images/lineup/artist3.webp",
         "description": "Pop rock elegante con más de dos décadas de trayectoria.",
         "type": "music",
         "level": 3
@@ -26,7 +26,7 @@
     {
         "id": "fuego-lento",
         "name": "Fuego Lento",
-        "image": "/images/lineup/fuego-lento.jpg",
+        "image": "/images/lineup/gourmet.jpg",
         "description": "Rock blusero con raíces en el under mendocino.",
         "type": "music",
         "level": 2
@@ -34,7 +34,7 @@
     {
         "id": "animas-del-valle",
         "name": "Ánimas del Valle",
-        "image": "/images/lineup/animas-del-valle.jpg",
+        "image": "/images/lineup/artist.jpg",
         "description": "Folclore eléctrico con guiños al rock sinfónico.",
         "type": "music",
         "level": 2
@@ -42,7 +42,7 @@
     {
         "id": "cordillera-sur",
         "name": "Cordillera Sur",
-        "image": "/images/lineup/cordillera-sur.jpg",
+        "image": "/images/lineup/artist3.webp",
         "description": "Power trio de rock patagónico, energía en estado puro.",
         "type": "music",
         "level": 2
@@ -50,7 +50,7 @@
     {
         "id": "vinoteca-andina",
         "name": "Vinoteca Andina",
-        "image": "/images/experiencias/vinoteca-andina.jpg",
+        "image": "/images/lineup/gourmet3.jpg",
         "description": "Cata guiada de vinos de altura de la región.",
         "type": "gastronomic",
         "level": 2
@@ -58,7 +58,7 @@
     {
         "id": "asado-al-disco",
         "name": "Asado al Disco",
-        "image": "/images/experiencias/asado-al-disco.jpg",
+        "image": "/images/lineup/gourmet2.jpg",
         "description": "Estación de cocina en vivo con cortes regionales.",
         "type": "gastronomic",
         "level": 2
@@ -66,7 +66,7 @@
     {
         "id": "quesos-de-montana",
         "name": "Quesos de Montaña",
-        "image": "/images/experiencias/quesos-de-montana.jpg",
+        "image": "/images/lineup/gourmet.jpg",
         "description": "Maridaje de quesos artesanales de altura con vinos de la casa.",
         "type": "gastronomic",
         "level": 2
@@ -74,7 +74,7 @@
     {
         "id": "parrilla-nomade",
         "name": "Parrilla Nómade",
-        "image": "/images/experiencias/parrilla-nomade.jpg",
+        "image": "/images/lineup/gourmet2.jpg",
         "description": "Cortes ahumados a la parrilla, cocina itinerante a fuego vivo.",
         "type": "gastronomic",
         "level": 2
@@ -82,7 +82,7 @@
     {
         "id": "banda-mendocina",
         "name": "Banda Mendocina",
-        "image": "/images/lineup/banda-mendocina.jpg",
+        "image": "/images/lineup/artist2.jpg",
         "description": "Proyecto emergente de la escena local.",
         "type": "music",
         "level": 1
@@ -90,7 +90,7 @@
     {
         "id": "los-trasnochados",
         "name": "Los Trasnochados",
-        "image": "/images/lineup/los-trasnochados.jpg",
+        "image": "/images/lineup/artist.jpg",
         "description": "Garage rock crudo, directo desde los bares de Godoy Cruz.",
         "type": "music",
         "level": 1
@@ -98,7 +98,7 @@
     {
         "id": "vendimia-rock",
         "name": "Vendimia Rock",
-        "image": "/images/lineup/vendimia-rock.jpg",
+        "image": "/images/lineup/artist3.webp",
         "description": "Cuarteto revelación de la última Fiesta de la Vendimia.",
         "type": "music",
         "level": 1
@@ -106,7 +106,7 @@
     {
         "id": "perro-andino",
         "name": "Perro Andino",
-        "image": "/images/lineup/perro-andino.jpg",
+        "image": "/images/lineup/artist.jpg",
         "description": "Stoner rock con letras que huelen a cordillera.",
         "type": "music",
         "level": 1
@@ -114,7 +114,7 @@
     {
         "id": "susurro-de-altura",
         "name": "Susurro de Altura",
-        "image": "/images/lineup/susurro-de-altura.jpg",
+        "image": "/images/lineup/artist2.jpg",
         "description": "Dúo acústico, sonidos íntimos para el atardecer.",
         "type": "music",
         "level": 1
@@ -122,7 +122,7 @@
     {
         "id": "food-truck-andino",
         "name": "Food Truck Andino",
-        "image": "/images/experiencias/food-truck-andino.jpg",
+        "image": "/images/lineup/gourmet.jpg",
         "description": "Propuesta gourmet de cocina de montaña.",
         "type": "gastronomic",
         "level": 1
@@ -130,7 +130,7 @@
     {
         "id": "empanadas-del-pedemonte",
         "name": "Empanadas del Pedemonte",
-        "image": "/images/experiencias/empanadas-del-pedemonte.jpg",
+        "image": "/images/lineup/gourmet2.jpg",
         "description": "Empanadas artesanales de cocción a leña, receta de campo.",
         "type": "gastronomic",
         "level": 1
@@ -138,7 +138,7 @@
     {
         "id": "heladeria-andina",
         "name": "Heladería Artesanal Andina",
-        "image": "/images/experiencias/heladeria-andina.jpg",
+        "image": "/images/lineup/gourmet3.jpg",
         "description": "Helados artesanales con infusión de vino y frutos de altura.",
         "type": "gastronomic",
         "level": 1
@@ -146,7 +146,7 @@
     {
         "id": "cafe-de-altura",
         "name": "Café de Altura",
-        "image": "/images/experiencias/cafe-de-altura.jpg",
+        "image": "/images/lineup/gourmet.jpg",
         "description": "Barra de cafetería de especialidad para cerrar la noche.",
         "type": "gastronomic",
         "level": 1
