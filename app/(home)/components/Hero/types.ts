@@ -1,3 +1,5 @@
+import { useScroll } from "motion/react";
+
 export type HeroProps = {
     src: string;
     align: string;
