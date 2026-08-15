@@ -16,6 +16,7 @@ export const Lineup = () => {
 
     return (
         <section
+            id="lineup"
             ref={sectionRef}
             className="w-full relative px-6 py-24 tablet:py-16 mobile:py-10 mobile:min-h-screen mobile:flex mobile:flex-col mobile:justify-center"
         >

@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 .pepe {
-  background-color: #fbebe7;
+  background-color: #f6cbc4;
 }
 
 @theme inline {
@@ -9,10 +9,9 @@
 
   --color-wr-wine: #5d1722;
   --color-wr-orange: #fd4324;
+  --color-wr-light-orange: #f6cbc4;
   --color-wr-yellow: #bf7a15;
-  --color-wr-plum: #7c2a3a;
   --color-wr-plum: #bf7a15;
-  --color-wr-rust: #7a3a1a;
   --color-wr-rust: #44050d;
 
   /* Font Families */

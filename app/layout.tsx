@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Oswald, Anton } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
+import { Navbar } from "@/components/ui/Navbar/Navbar";
 
 const oswald = Oswald({
     subsets: ["latin"],
@@ -64,7 +65,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             lang="es"
             className={`${oswald.variable} ${inter.variable} ${anton.variable} h-full antialiased`}
         >
-            <body className="min-h-full flex flex-col">{children}</body>
+            <body className="min-h-full flex flex-col">
+                <Navbar />
+                {children}
+            </body>
         </html>
     );
 }

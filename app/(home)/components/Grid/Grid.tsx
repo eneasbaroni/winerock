@@ -3,7 +3,10 @@ import { ArtistCard } from "../ArtistCard/ArtistCard";
 
 export const Grid = () => {
     return (
-        <section className="w-full px-6 py-24 tablet:py-16 mobile:py-10 mobile:mt-20">
+        <section
+            id="grid"
+            className="w-full px-6 py-24 tablet:py-16 mobile:py-10 mobile:mt-20"
+        >
             <h2 className="mx-auto mb-12 max-w-6xl text-center font-anton text-4xl uppercase tablet:mb-8 tablet:text-3xl mobile:mb-6 mobile:text-2xl">
                 Artistas y experiencias
             </h2>
