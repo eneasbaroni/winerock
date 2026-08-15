@@ -23,7 +23,7 @@ export const Lineup = () => {
             <div className="w-full h-full absolute -z-10 top-0 left-0 overflow-hidden">
                 <motion.div
                     style={{ y: backgroundY }}
-                    className="w-full h-full"
+                    className="relative w-full h-full"
                 >
                     <Image
                         src="/images/lineup/card-back-dt-01.svg"
@@ -44,7 +44,7 @@ export const Lineup = () => {
                 alt="Wine Rock Logo"
                 width={400}
                 height={400}
-                className="h-15 tablet:h-10 mobile:h-8 mx-auto mb-12 tablet:mb-8 mobile:mb-6 z-20"
+                className="h-15 w-auto tablet:h-10 mobile:h-8 mx-auto mb-12 tablet:mb-8 mobile:mb-6 z-20"
             />
             <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center font-anton uppercase z-20">
                 {LEVEL_ORDER.map((level) => {
