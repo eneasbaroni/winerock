@@ -19,7 +19,7 @@ export const Footer = () => {
     const backgroundYMobile = useTransform(
         scrollYProgress,
         [0, 1],
-        ["-60%", "5%"],
+        ["-40%", "20%"],
     );
 
     return (
@@ -71,7 +71,7 @@ export const Footer = () => {
                 }}
             />
             <motion.div
-                className="absolute inset-x-0 bottom-0 z-10 hidden aspect-807/192 w-full bg-wr-wine mobile:block"
+                className="absolute inset-x-0 bottom-0 z-10 hidden aspect-[807.66/253] w-full bg-wr-wine mobile:block"
                 style={{
                     y: backgroundYMobile,
                     maskImage: "url(/images/footer/bg-mobile.svg)",
