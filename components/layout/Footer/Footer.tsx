@@ -16,6 +16,11 @@ export const Footer = () => {
         offset: ["start end", "end end"],
     });
     const backgroundY = useTransform(scrollYProgress, [0, 1], ["-60%", "1%"]);
+    const backgroundYMobile = useTransform(
+        scrollYProgress,
+        [0, 1],
+        ["-60%", "5%"],
+    );
 
     return (
         <footer
@@ -68,7 +73,7 @@ export const Footer = () => {
             <motion.div
                 className="absolute inset-x-0 bottom-0 z-10 hidden aspect-807/192 w-full bg-wr-wine mobile:block"
                 style={{
-                    y: backgroundY,
+                    y: backgroundYMobile,
                     maskImage: "url(/images/footer/bg-mobile.svg)",
                     WebkitMaskImage: "url(/images/footer/bg-mobile.svg)",
                     ...FOOTER_BACKGROUND_MASK_STYLE,
