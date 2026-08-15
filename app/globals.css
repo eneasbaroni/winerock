@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 .pepe {
-  background-color: #f6cbc4;
+  background-color: rgb(87, 52, 57);
 }
 
 @theme inline {
