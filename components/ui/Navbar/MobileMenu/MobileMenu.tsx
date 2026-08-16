@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,14 +15,23 @@ import {
 } from "./constants";
 
 export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
+    const [isVisible, setIsVisible] = useState(false);
+
     return (
         <motion.div
             variants={CURTAIN_VARIANTS}
             initial="initial"
             animate={isOpen ? "animate" : "exit"}
             transition={CURTAIN_TRANSITION}
+            onAnimationStart={() => {
+                if (isOpen) setIsVisible(true);
+            }}
+            onAnimationComplete={() => {
+                if (!isOpen) setIsVisible(false);
+            }}
             aria-hidden={!isOpen}
-            className="fixed inset-0 z-40 flex h-svh w-full flex-col items-center justify-center gap-8 overflow-hidden bg-wr-rust"
+            style={{ visibility: isVisible ? "visible" : "hidden" }}
+            className="fixed inset-0 z-40 flex h-dvh w-full flex-col items-center justify-center gap-8 overflow-hidden bg-wr-rust"
         >
             <motion.div
                 variants={BACKGROUND_VARIANTS}
