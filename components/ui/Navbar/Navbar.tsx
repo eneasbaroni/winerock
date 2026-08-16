@@ -15,7 +15,12 @@ export const Navbar = () => {
 
     return (
         <>
-            <nav className="fixed top-2 z-50 flex w-full items-center justify-center mobile:px-4">
+            <nav
+                style={{
+                    top: "calc(env(safe-area-inset-top) + 0.5rem)",
+                }}
+                className="fixed z-50 flex w-full items-center justify-center mobile:px-4"
+            >
                 <ul className="flex rounded-full bg-wr-rust px-6 py-1 text-lg w-full max-w-6xl text-wr-orange justify-center items-center shadow-lg shadow-wr-orange/5">
                     <li className="mr-auto">
                         <Link href="/">
