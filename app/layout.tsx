@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Oswald, Anton } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
-import { Navbar, Footer } from "@/components";
+import { Navbar, Footer, IntroAnimation } from "@/components";
 
 const oswald = Oswald({
     subsets: ["latin"],
@@ -72,6 +72,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             className={`${oswald.variable} ${inter.variable} ${anton.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">
+                <IntroAnimation />
                 <Navbar />
                 {children}
                 <Footer />
