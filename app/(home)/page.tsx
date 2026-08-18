@@ -1,4 +1,4 @@
-import { Advertisement, Grid, Hero, Lineup } from "./components";
+import { Advertisement, Faq, Grid, Hero, Lineup } from "./components";
 import { siteConfig } from "@/lib/site-config";
 
 const eventJsonLd = {
@@ -42,6 +42,7 @@ export default function Home() {
             />
             <Hero />
             <Grid />
+            <Faq />
             <Advertisement />
         </div>
     );

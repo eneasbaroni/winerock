@@ -1,0 +1,42 @@
+[
+    {
+        "id": "fecha-lugar",
+        "question": "¿Cuándo y dónde es Wine Rock Sessions?",
+        "answer": "El sábado 28 de marzo de 2026, en Lomas del Malbec, Luján de Cuyo, Mendoza — a los pies de la Cordillera de los Andes."
+    },
+    {
+        "id": "horario",
+        "question": "¿Cuál es el horario del evento?",
+        "answer": "La experiencia arranca por la tarde y se extiende hasta la noche, combinando música en vivo, feria de vinos y experiencias gastronómicas."
+    },
+    {
+        "id": "entradas",
+        "question": "¿Dónde consigo las entradas?",
+        "answer": "Las entradas se venden a través de Passline. Hay dos tipos: General y Wine Fanatic VIP."
+    },
+    {
+        "id": "general-vs-vip",
+        "question": "¿Qué diferencia hay entre la entrada General y la Wine Fanatic VIP?",
+        "answer": "La General incluye acceso a todos los shows, la feria de vinos y comidas, y experiencias artísticas seleccionadas. La Wine Fanatic VIP suma un sector exclusivo, vista preferencial, baños privados, estacionamiento dedicado y una propuesta gastronómica y enológica de mayor nivel."
+    },
+    {
+        "id": "experiencias",
+        "question": "¿Qué experiencias de vino y gastronomía voy a encontrar?",
+        "answer": "Más de 15 etiquetas de vino seleccionadas, experiencias guiadas por especialistas y maridajes pensados especialmente para potenciar cada copa con la energía de la cordillera."
+    },
+    {
+        "id": "actividades-gratuitas",
+        "question": "¿Hay actividades gratuitas además del lineup musical?",
+        "answer": "Sí. Con inscripción previa, podés sumarte a actividades pensadas para vivir el vino desde distintas perspectivas: creativa, técnica, artística y emocional."
+    },
+    {
+        "id": "edad-minima",
+        "question": "¿Hay restricción de edad para ingresar?",
+        "answer": "Estamos confirmando la política de edad mínima para esta edición — actualizamos esta respuesta apenas esté definida."
+    },
+    {
+        "id": "que-llevar",
+        "question": "¿Qué puedo llevar al festival?",
+        "answer": "Todavía estamos armando la lista definitiva de qué llevar y qué no está permitido ingresar. Pronto la vas a encontrar acá."
+    }
+]
