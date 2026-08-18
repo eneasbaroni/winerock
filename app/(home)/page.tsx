@@ -1,4 +1,4 @@
-import { Advertisement, Grid, Hero, Lineup } from "./components";
+import { Advertisement } from "./components";
 import { siteConfig } from "@/lib/site-config";
 
 const eventJsonLd = {
@@ -33,15 +33,15 @@ const eventJsonLd = {
 export default function Home() {
     return (
         <div>
-            <Lineup />
+            {/* <Lineup /> */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify(eventJsonLd),
                 }}
             />
-            <Hero />
-            <Grid />
+            {/* <Hero />
+            <Grid /> */}
             <Advertisement />
         </div>
     );
