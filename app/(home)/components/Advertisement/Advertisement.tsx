@@ -29,7 +29,7 @@ export const Advertisement = () => {
                 height={200}
                 className="object-contain"
             />
-            <h3 className="font-extralight">Pronto mas información</h3>
+            <h3 className="font-extralight">Próximamente más información</h3>
         </div>
     );
 };
