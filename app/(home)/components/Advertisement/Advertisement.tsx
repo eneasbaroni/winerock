@@ -19,7 +19,9 @@ export const Advertisement = () => {
                     />
                 </div>
             </div>
-            <h2 className="text-2xl font-bold text-center">Vuelve</h2>
+            <h1 className="text-2xl font-bold text-center">
+                Wine Rock Sessions vuelve pronto
+            </h1>
             <Image
                 src="/images/logos/logo-white.svg"
                 alt="logo"
