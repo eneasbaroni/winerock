@@ -1,4 +1,11 @@
-import { Advertisement, Faq, Grid, Hero, Lineup } from "./components";
+import {
+    Advertisement,
+    Faq,
+    Grid,
+    Hero,
+    Lineup,
+    Location,
+} from "./components";
 import { siteConfig } from "@/lib/site-config";
 
 const eventJsonLd = {
@@ -13,9 +20,16 @@ const eventJsonLd = {
         name: siteConfig.event.venue,
         address: {
             "@type": "PostalAddress",
+            streetAddress: siteConfig.event.address,
+            postalCode: siteConfig.event.postalCode,
             addressLocality: siteConfig.event.locality,
             addressRegion: siteConfig.event.region,
             addressCountry: siteConfig.event.country,
+        },
+        geo: {
+            "@type": "GeoCoordinates",
+            latitude: siteConfig.event.geo.lat,
+            longitude: siteConfig.event.geo.lng,
         },
     },
     image: [`${siteConfig.url}${siteConfig.ogImage}`],
@@ -42,6 +56,7 @@ export default function Home() {
             />
             <Hero />
             <Grid />
+            <Location />
             <Faq />
             <Advertisement />
         </div>

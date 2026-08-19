@@ -52,12 +52,19 @@ export const Footer = () => {
                     <p className="mb-4 font-oswald text-xs tracking-widest text-white/60 uppercase">
                         {FOOTER_CONTACT.title}
                     </p>
-                    <p className="font-inter text-lg text-white/80 uppercase">
-                        {FOOTER_CONTACT.venue}
-                    </p>
-                    <p className="font-inter text-sm font-light text-white/80">
-                        {FOOTER_CONTACT.address}
-                    </p>
+                    <a
+                        href={FOOTER_CONTACT.mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block transition-opacity hover:opacity-70"
+                    >
+                        <p className="font-inter text-lg text-white/80 uppercase">
+                            {FOOTER_CONTACT.venue}
+                        </p>
+                        <p className="font-inter text-sm font-light text-white/80">
+                            {FOOTER_CONTACT.address}
+                        </p>
+                    </a>
                 </div>
             </div>
 

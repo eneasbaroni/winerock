@@ -23,6 +23,7 @@ export const FOOTER_CONTACT = {
     title: "Contacto",
     venue: siteConfig.event.venue,
     address: `${siteConfig.event.locality}, ${siteConfig.event.region}`,
+    mapsUrl: `https://www.google.com/maps/search/?api=1&query=${siteConfig.event.geo.lat},${siteConfig.event.geo.lng}`,
 };
 
 export const FOOTER_BACKGROUND_MASK_STYLE = {

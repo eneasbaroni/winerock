@@ -62,3 +62,7 @@ h3 {
   font-family: var(--font-anton);
 }
 
+.maplibregl-ctrl-attrib-inner {
+  display: none;
+}
+

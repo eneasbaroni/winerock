@@ -20,6 +20,7 @@ export const HamburgerButton = ({ isOpen, onToggle }: HamburgerButtonProps) => {
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <motion.path
+                    initial={false}
                     animate={{ d: isOpen ? OPEN_PATH : CLOSED_PATH }}
                     transition={ICON_TRANSITION}
                     strokeWidth="4"
