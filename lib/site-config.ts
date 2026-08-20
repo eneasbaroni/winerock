@@ -1,8 +1,8 @@
 export const siteConfig = {
     name: "Wine Rock Sessions",
-    title: "Wine Rock Sessions 2026 | Música, vino y montaña en Mendoza",
+    title: "Wine Rock Sessions 2027 | Música, vino y montaña en Mendoza",
     description:
-        "Wine Rock Sessions vuelve a Lomas del Malbec, Luján de Cuyo, el sábado 28 de marzo de 2026: música en vivo a los pies de la cordillera, feria de vinos y experiencias gastronómicas.",
+        "Wine Rock Sessions vuelve a Lomas del Malbec, Luján de Cuyo, el sábado 27 de marzo de 2027: música en vivo a los pies de la cordillera, feria de vinos y experiencias gastronómicas.",
     url: "https://www.winerocksessions.com.ar",
     ogImage: "/images/logos/logo.png",
     keywords: [
@@ -15,9 +15,9 @@ export const siteConfig = {
         "festival de vino Argentina",
     ],
     event: {
-        name: "Wine Rock Sessions 2026",
-        startDate: "2026-03-28",
-        endDate: "2026-03-28T23:59:00-03:00",
+        name: "Wine Rock Sessions 2027",
+        startDate: "2027-03-27",
+        endDate: "2027-03-27T23:59:00-03:00",
         venue: "Lomas del Malbec",
         locality: "Luján de Cuyo",
         region: "Mendoza",
