@@ -17,11 +17,18 @@ export const siteConfig = {
     event: {
         name: "Wine Rock Sessions 2026",
         startDate: "2026-03-28",
+        endDate: "2026-03-28T23:59:00-03:00",
         venue: "Lomas del Malbec",
         locality: "Luján de Cuyo",
         region: "Mendoza",
         country: "AR",
-        organizers: ["En Vivo Producciones", "Produce Crack Mendoza"],
+        organizers: [
+            {
+                name: "En Vivo Producciones",
+                url: "https://envivoproducciones.net/",
+            },
+        ],
         lineup: ["Ratones Paranoicos", "Catupecu Machu", "Estelares"],
+        ticketsUrl: "https://www.passline.com/wine-rock/",
     },
 } as const;
