@@ -3,8 +3,6 @@ import { ParallaxLayerProps } from "./types";
 import { DESKTOP_IMAGE_SIZE, MOBILE_IMAGE_SIZE, MOBILE_QUERY } from "./constants";
 import { useMediaQuery } from "@/lib/hooks/useMediaQuery";
 import Image from "next/image";
-import Lenis from "lenis";
-import { useEffect } from "react";
 
 export const ParallaxLayer = ({
     src,
@@ -18,17 +16,6 @@ export const ParallaxLayer = ({
 }: ParallaxLayerProps) => {
     const isMobile = useMediaQuery(MOBILE_QUERY);
     const y = useTransform(progress, [0, 1], isMobile ? rangeMobile : range);
-
-    useEffect(() => {
-        const lenis = new Lenis();
-
-        function raf(time: number) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-    }, []);
 
     if (isMobile === undefined) return null;
 
